@@ -62,7 +62,7 @@ enum WechatRoute: URLRequestConvertible {
     var URLRequest: NSMutableURLRequest {
 
         let URL = NSURL(string: WechatRoute.baseURLString)!
-        let mutableURLRequest = NSMutableURLRequest(URL: URL.URLByAppendingPathComponent(path))
+        let mutableURLRequest = NSMutableURLRequest(URL: URL.URLByAppendingPathComponent(path)!)
         mutableURLRequest.HTTPMethod = Alamofire.Method.GET.rawValue
 
         return Alamofire.ParameterEncoding.URL.encode(mutableURLRequest, parameters: parameters).0

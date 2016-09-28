@@ -123,7 +123,7 @@ extension WechatManager {
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
 
-        return newImage
+        return newImage!
     }
 
     //send request
